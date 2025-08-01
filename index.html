@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" imccccccc />
+  <title>Spotify Cover HD</title>
+  <link rel="icon" href="https://static.wikia.nocookie.net/logopedia/images/8/8b/Spotify_2024_Icon.svg"
+    type="image/png">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+  <img src="https://static.wikia.nocookie.net/logopedia/images/1/17/Spotify_2024_%28Print%29.svg" class="spotify">
+  <h1 style="text-align: center;">Convertidor de portadas Spotify a máxima calidad</h1>
+
+  <div class="input-container">
+    <p>enlaces validos: i.scdn.co o image-cdn-(xx).spotifycdn.com</p>
+    <input id="coverUrl" type="text" placeholder="Pega aquí la URL de la imagen (640x640)" />
+    <button onclick="convertUrl()">Convertir a HD</button>
+  </div>
+  
+  <div class="input-container">
+    <p>enlaces validos: spotify.com</p>
+    <input id="spotifyLink" type="text" placeholder="Pega aquí el link de un álbum, canción, etc." />
+    <button onclick="fetchImageFromSpotifyLink()">Obtener portada en HD</button>
+  </div>
+
+  <div id="info"></div>
+  <a id="downloadBtn" download="spotify_cover.jpg">Descargar imagen</a>
+  <img id="coverImg" src="" alt="" style="display:none;" />
+
+  <button onclick="switchFormat()" id="switchFormatBtn" >Cambiar a formato: DATE • Name</button>
+  <span>solo para enlaces de spotify.com</span>
+  <span>ej: 2004-09-15 • Absolution (experimental)</span>
+  <script src="script.js"></script>
+</body>
+
+</html>
